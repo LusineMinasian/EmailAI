@@ -7,8 +7,8 @@ import threading
 def window_layout():
     sg.theme('DarkGrey5')
 
-    layout = [[sg.Text('Enter your email', size=(15, 1)), sg.InputText(key='-EMAIL-')],
-            [sg.Text('Enter style'), sg.Combo(['бизнес', 'повседневный', 'простой'], key='-STYLE-', size=(15, 1))],
+    layout = [[sg.Text('Enter your email', size=(15, 1)), sg.InputText(key='-EMAIL-', size=(50, 10))],
+            [sg.Text('Enter style'), sg.Combo(['business', 'casual', 'family'], key='-STYLE-', size=(15, 1))],
             [sg.Button('Create'), sg.Button('Cancel')],
             [sg.Output(size=(70, 30), font='Courier 8',
                          expand_x=True, expand_y=True, key='-OUTPUT-')]
